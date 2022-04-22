@@ -14,6 +14,8 @@ def pregunta_01():
     En este punto se realiza la lectura de conjuntos de datos.
     Complete el código presentado a continuación.
     """
+    import numpy as np
+
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv", sep=",", thousands = None, decimal=".")
 
@@ -52,10 +54,10 @@ def pregunta_02():
     df = pd.read_csv("gm_2008_region.csv", sep=",", thousands = None, decimal=".")
 
     # Asigne a la variable los valores de la columna `fertility`
-    X = np.array(df['life']).reshape(-1,1)
+    X = df['life']
 
     # Asigne a la variable los valores de la columna `life`
-    y = np.array(df['fertility']).reshape(-1,1)
+    y = df['fertility']
 
     # Imprima las dimensiones del DataFrame
     print(df.shape)
